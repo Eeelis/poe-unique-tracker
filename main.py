@@ -1,4 +1,3 @@
-
 import requests
 import customtkinter
 import keyboard
@@ -13,8 +12,7 @@ from bs4 import BeautifulSoup
 ### https://github.com/TomSchimansky/CustomTkinter ###
 
 def index_uniques():
-
-    if (login_frame.checkbox.get() == 1):
+    if (login_frame.remember_me_check_box.get() == 1):
         store_login_info()
     else:
         clear_login_info()
@@ -64,6 +62,7 @@ def index_uniques():
         for item in soup.find_all("div", {"class": "item unowned"}):
             unowned_items.append(item.text.strip())
 
+    # Indexing finished succesfully
     progress_bar_frame.forget()
     status.configure(text=f"Done indexing. Your collection is { round(len(owned_items) / (len(unowned_items) + len(owned_items)), 4) * 100}% complete.\nPress CTRL+C while hovering over an item to look for it in your collection.")
 
@@ -71,6 +70,7 @@ def index_uniques():
 def check_item_in_clipboard():
         # Make sure the clipboard has time to update
         time.sleep(0.25)
+        # PoE item data always contains the string "--------", so we use that to make sure the clipboard contains an item
         if ("--------" in clipboard.paste()):
             item = Item(clipboard.paste())
             if (item.is_unique()):
@@ -83,7 +83,7 @@ def check_item_in_clipboard():
 
 def store_login_info():
     f = open("LoginInfo", "w")
-    f.writelines([login_frame.username_input.get() + "\n", login_frame.session_ID_input.get() + "\n", str(login_frame.checkbox.get())])
+    f.writelines([login_frame.username_input.get() + "\n", login_frame.session_ID_input.get() + "\n", str(login_frame.remember_me_check_box.get())])
 
 def get_login_info():
     try:
@@ -92,7 +92,7 @@ def get_login_info():
             login_frame.username_input.insert(0, info[0].rstrip())
             login_frame.session_ID_input.insert(0, info[1].rstrip())
             if (info[2] == "1"):
-                login_frame.checkbox.select()
+                login_frame.remember_me_check_box.select()
     except:
         pass
 
@@ -114,11 +114,11 @@ class LoginFrame(customtkinter.CTkFrame):
         self.session_ID_input = customtkinter.CTkEntry(self, placeholder_text="SessionID")
         self.session_ID_input.pack(pady=12, padx=10)
 
-        self.button = customtkinter.CTkButton(self, text="Index Uniques", command=index_uniques)
-        self.button.pack(pady=12, padx=10)
+        self.index_uniques_button = customtkinter.CTkButton(self, text="Index Uniques", command=index_uniques)
+        self.index_uniques_button.pack(pady=12, padx=10)
 
-        self.checkbox = customtkinter.CTkCheckBox(self, text="Remember Me")
-        self.checkbox.pack(pady=12, padx=10)
+        self.remember_me_check_box = customtkinter.CTkCheckBox(self, text="Remember Me")
+        self.remember_me_check_box.pack(pady=12, padx=10)
 
 class IndexingProgressFrame(customtkinter.CTkFrame):
     def __init__(self, *args, header_name="ProgresssBarFrame", **kwargs):
@@ -137,7 +137,6 @@ if __name__ == "__main__":
         running = False
 
     running = True
-
     owned_items = []
     unowned_items = []
 
@@ -164,13 +163,3 @@ if __name__ == "__main__":
             check_item_in_clipboard()
     
     root.destroy()
-
-
-
-
-
-
-
-
-
-
