@@ -9,4 +9,6 @@ How to use:
 4. Check whether a unique item you find is already in your stash by hovering over it in-game and pressing CTRL+C
 
 
+
+
 <img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/LogIn.png">
