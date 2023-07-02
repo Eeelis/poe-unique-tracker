@@ -10,4 +10,12 @@ How to use:
 
 <br>
 
-<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/LogIn.png">
+<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/LogIn.png">
+
+<br>
+
+<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/Indexing.png">
+
+<br>
+
+<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/DoneIndexing.png">
