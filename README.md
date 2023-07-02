@@ -5,10 +5,9 @@ How to use:
 
 1. Run main.py
 2. Log in by typing in your username and [PoE Session ID](https://www.gamepressure.com/newsroom/how-to-find-poe-session-id/z74e59)
-3. Wait as the program indexes your collection
+3. Wait for the program to finish indexing your items
 4. Check whether a unique item you find is already in your stash by hovering over it in-game and pressing CTRL+C
 
-<br>
 <br>
 
 <img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/LogIn.png">
