@@ -8,4 +8,4 @@ How to use:
 3. Wait as the program indexes your collection
 4. Check whether a unique item you find is already in your stash by hovering over it in-game and pressing CTRL+C
 
-[](DoneIndexing.png)
+[alt text](https://github.com/Eeelis/poe-unique-tracker/blob/main/image.jpg?raw=true)
