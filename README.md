@@ -10,6 +10,10 @@ How to use:
 
 <br>
 
+---
+
+<br>
+
 <img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/LogIn.png">
 
 <br>
