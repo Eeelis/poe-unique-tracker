@@ -3,7 +3,7 @@ Path of Exile is an ARPG developed by Grinding Gear Games. In it players slay mo
 
 How to use:
 
-1. Run main.py
+1. Run main.py, or use your preferred method to build it into an executable
 2. Log in by typing in your username and [PoE Session ID](https://www.gamepressure.com/newsroom/how-to-find-poe-session-id/z74e59)
 3. Wait for the program to finish indexing your items
 4. Check whether a unique item you find is already in your stash by hovering over it in-game and pressing CTRL+C
