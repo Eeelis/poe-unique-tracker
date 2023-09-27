@@ -14,12 +14,12 @@ How to use:
 
 <br>
 
-<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/LogIn.png">
+<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/LogIn.png" width="200">
 
 <br>
 
-<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/Indexing.png">
+<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/Indexing.png" width="200">
 
 <br>
 
-<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/DoneIndexing.png">
+<img src="https://github.com/Eeelis/poe-unique-tracker/blob/main/Images/DoneIndexing.png" width="200">
